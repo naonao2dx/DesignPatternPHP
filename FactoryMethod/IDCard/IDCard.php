@@ -15,7 +15,7 @@ namespace FactoryMethod {
     {
         private $owner;
 
-        function __construct($owner)
+        function __construct(string $owner)
         {
             println("Make {$owner}'s card.");
             $this->owner = $owner;
@@ -29,7 +29,7 @@ namespace FactoryMethod {
         /**
          * @return mixed
          */
-        public function getOwner()
+        public function getOwner() : string
         {
             return $this->owner;
         }

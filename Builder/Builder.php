@@ -10,8 +10,8 @@ namespace Builder;
 
 abstract class Builder
 {
-    abstract public function makeTitle($title);
-    abstract public function makeString($string);
-    abstract public function makeItems($items);
+    abstract public function makeTitle(string $title);
+    abstract public function makeString(string $string);
+    abstract public function makeItems(array $items);
     abstract public function close();
 }

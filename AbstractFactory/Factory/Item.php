@@ -13,7 +13,7 @@ namespace AbstractFactory {
     {
         protected $caption;
 
-        public function __construct($caption)
+        public function __construct(string $caption)
         {
             $this->caption = $caption;
         }

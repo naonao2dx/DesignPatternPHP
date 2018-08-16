@@ -11,12 +11,12 @@ namespace AdvStaticFactoryMethod {
     {
         private $owner;
 
-        static public function create($owner)
+        static public function create(string $owner) : IDCard
         {
             return new IDCard($owner);
         }
 
-        private function __construct($owner)
+        private function __construct(string $owner)
         {
             println("Make {$owner}'s card.");
             $this->owner = $owner;

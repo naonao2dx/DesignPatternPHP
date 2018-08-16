@@ -15,13 +15,13 @@ namespace AbstractFactory {
         protected $author;
         protected $content = array();
 
-        public function __construct($title, $author)
+        public function __construct(string $title, string $author)
         {
             $this->title = $title;
             $this->author = $author;
         }
 
-        public function add($item)
+        public function add(Item $item)
         {
             $this->content[] = $item;
         }

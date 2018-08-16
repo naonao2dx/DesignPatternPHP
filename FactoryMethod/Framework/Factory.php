@@ -11,16 +11,15 @@ namespace FactoryMethod {
 
     abstract class Factory
     {
-        public function create($owner)
+        public function create(string $owner) : Product
         {
             $product = $this->createProduct($owner);
             $this->registerProduct($product);
             return $product;
-
         }
 
-        abstract protected function createProduct($owner);
+        abstract protected function createProduct(string $owner);
 
-        abstract protected function registerProduct($product);
+        abstract protected function registerProduct(Product $product);
     }
 }

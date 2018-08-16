@@ -5,7 +5,7 @@
  * Date: 2018/08/15
  * Time: 0:24
  */
-
+declare(strict_types=1);
 
 include_once dirname(__FILE__) . "/FactoryMethod/Runner.php";
 include_once dirname(__FILE__) . "/AdvStaticFactoryMethod/Runner.php";

@@ -14,17 +14,17 @@ namespace FactoryMethod {
     {
         private $owners = array();
 
-        protected function createProduct($owner)
+        protected function createProduct(string $owner) : IDCard
         {
             return new IDCard($owner);
         }
 
-        protected function registerProduct($product)
+        protected function registerProduct(Product $product)
         {
             $this->owners[] = $product->getOwner();
         }
 
-        public function getOwners()
+        public function getOwners() : array
         {
             return $this->owners;
         }

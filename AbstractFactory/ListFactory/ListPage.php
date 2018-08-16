@@ -12,12 +12,12 @@ namespace AbstractFactory {
 
     class ListPage extends Page
     {
-        public function __construct($title, $author)
+        public function __construct(string $title, string $author)
         {
             parent::__construct($title, $author);
         }
 
-        public function makeHTML()
+        public function makeHTML() : string
         {
             $string = "<html><head><title>{$this->title}</title></head>" . PHP_EOL;
             $string .= "<body>" . PHP_EOL;

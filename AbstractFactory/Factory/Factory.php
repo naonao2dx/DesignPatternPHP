@@ -12,7 +12,7 @@ namespace AbstractFactory {
 
     abstract class Factory
     {
-        static public function getFactory($classname)
+        static public function getFactory(string $classname)
         {
             if (false == class_exists($classname)) {
                 throw new \Exception(("Undefined class {$classname}."));
@@ -20,10 +20,10 @@ namespace AbstractFactory {
             return new $classname;
         }
 
-        abstract public function createLink($caption, $url);
+        abstract public function createLink(string $caption, string $url);
 
-        abstract public function createTray($caption);
+        abstract public function createTray(string $caption);
 
-        abstract public function createPage($title, $author);
+        abstract public function createPage(string $title, string $author);
     }
 }

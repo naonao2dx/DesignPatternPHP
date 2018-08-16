@@ -12,12 +12,12 @@ namespace AbstractFactory {
 
     class ListTray extends Tray
     {
-        public function __construct($caption)
+        public function __construct(string $caption)
         {
             parent::__construct($caption);
         }
 
-        public function makeHTML()
+        public function makeHTML() : string
         {
             $string = "<li>" . PHP_EOL;
             $string .= $this->caption . PHP_EOL;

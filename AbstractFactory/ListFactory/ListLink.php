@@ -12,12 +12,12 @@ namespace AbstractFactory {
 
     class ListLink extends Link
     {
-        public function __construct($caption, $url)
+        public function __construct(string $caption, string $url)
         {
             parent::__construct($caption, $url);
         }
 
-        public function makeHTML()
+        public function makeHTML() : string
         {
             $string =  "  <li><a href=\"{$this->url}\">{$this->caption}</a></li>" . PHP_EOL;
             return $string;

@@ -13,7 +13,7 @@ namespace AbstractFactory {
     {
         protected $url;
 
-        public function __construct($caption, $url)
+        public function __construct(string $caption, string $url)
         {
             parent::__construct($caption);
             $this->url = $url;

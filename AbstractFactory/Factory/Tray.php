@@ -13,12 +13,12 @@ namespace AbstractFactory {
     {
         protected $tray = array();
 
-        public function __construct($caption)
+        public function __construct(string $caption)
         {
             parent::__construct($caption);
         }
 
-        public function add($item)
+        public function add(Item $item)
         {
             $this->tray[] = $item;
         }
