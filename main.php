@@ -11,6 +11,7 @@ include_once dirname(__FILE__) . "/FactoryMethod/Runner.php";
 include_once dirname(__FILE__) . "/AdvStaticFactoryMethod/Runner.php";
 include_once dirname(__FILE__) . "/AbstractFactory/Runner.php";
 include_once dirname(__FILE__) . "/Builder/Runner.php";
+include_once dirname(__FILE__) . "/AdvBuilder/Runner.php";
 
 $factoryMethod = new FactoryMethod\Runner();
 $factoryMethod->run();
@@ -23,3 +24,6 @@ $abstractFactory->run();
 
 $builder = new Builder\Runner();
 $builder->run();
+
+$advBuilder = new AdvBuilder\Runner();
+$advBuilder->run();
