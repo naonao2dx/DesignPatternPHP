@@ -11,7 +11,7 @@ namespace FactoryMethod {
     include_once dirname(__FILE__) . "/../../Util.php";
 
 
-    class IDCard extends Product
+    class IDCard implements Product
     {
         private $owner;
 

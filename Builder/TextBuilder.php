@@ -9,7 +9,7 @@
 namespace Builder;
 include_once dirname(__FILE__) . "/Builder.php";
 
-class TextBuilder extends Runner
+class TextBuilder implements Builder
 {
     private $string;
     public function makeTitle(string $title)

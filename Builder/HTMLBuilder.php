@@ -9,7 +9,7 @@
 namespace Builder {
     include_once dirname(__FILE__) . "/Builder.php";
 
-    class HTMLBuilder extends Builder
+    class HTMLBuilder implements Builder
     {
         private $filename;
         private $string;

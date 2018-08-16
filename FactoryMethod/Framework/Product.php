@@ -8,8 +8,8 @@
 
 namespace FactoryMethod {
 
-    abstract class Product
+    interface Product
     {
-        abstract public function use();
+        public function use();
     }
 }
