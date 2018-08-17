@@ -14,7 +14,7 @@ include_once dirname(__FILE__) . "/ListFactory/ListFactory.php";
 
 class Runner extends \RunnerBase
 {
-    public function exec()
+    protected function exec()
     {
         $classname = "AbstractFactory\ListFactory";
         $factory = Factory::getFactory($classname);

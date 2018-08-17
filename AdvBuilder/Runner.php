@@ -13,7 +13,7 @@ include_once dirname(__FILE__) . "/../Util.php";
 
 class Runner extends \RunnerBase
 {
-    public function exec()
+    protected function exec()
     {
         $builder = People::getBuilder("John", 37);
         $builder->mail = "builder@mail.com";

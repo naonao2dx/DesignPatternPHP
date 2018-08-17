@@ -12,7 +12,7 @@ include_once dirname(__FILE__) . "/IDCard.php";
 
 class Runner extends \RunnerBase
 {
-    public function exec()
+    protected function exec()
     {
         $card1 = IDCard::create("Tom");
         $card2 = IDCard::create("Nancy");

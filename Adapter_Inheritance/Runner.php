@@ -12,7 +12,7 @@ include_once dirname(__FILE__) . "/PrintBanner.php";
 
 class Runner extends \RunnerBase
 {
-    public function exec()
+    protected function exec()
     {
         $p = new PrintBanner("Hello!");
         $p->printWeak();

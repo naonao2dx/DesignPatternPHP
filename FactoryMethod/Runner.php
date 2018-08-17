@@ -12,7 +12,7 @@ include_once dirname(__FILE__) . "/IDCard/IDCardFactory.php";
 
 class Runner extends \RunnerBase
 {
-    public function exec()
+    protected function exec()
     {
         $factory = new IDCardFactory();
         $card1 = $factory->create("Tom");
