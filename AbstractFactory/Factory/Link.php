@@ -6,17 +6,16 @@
  * Time: 11:15
  */
 
-namespace AbstractFactory {
-    include_once dirname(__FILE__) . "/Item.php";
+namespace AbstractFactory;
+include_once dirname(__FILE__) . "/Item.php";
 
-    abstract class Link extends Item
+abstract class Link extends Item
+{
+    protected $url;
+
+    public function __construct(string $caption, string $url)
     {
-        protected $url;
-
-        public function __construct(string $caption, string $url)
-        {
-            parent::__construct($caption);
-            $this->url = $url;
-        }
+        parent::__construct($caption);
+        $this->url = $url;
     }
 }

@@ -6,21 +6,20 @@
  * Time: 11:17
  */
 
-namespace AbstractFactory {
-    include_once dirname(__FILE__) . "/Item.php";
+namespace AbstractFactory;
+include_once dirname(__FILE__) . "/Item.php";
 
-    abstract class Tray extends Item
+abstract class Tray extends Item
+{
+    protected $tray = array();
+
+    public function __construct(string $caption)
     {
-        protected $tray = array();
+        parent::__construct($caption);
+    }
 
-        public function __construct(string $caption)
-        {
-            parent::__construct($caption);
-        }
-
-        public function add(Item $item)
-        {
-            $this->tray[] = $item;
-        }
+    public function add(Item $item)
+    {
+        $this->tray[] = $item;
     }
 }

@@ -6,20 +6,19 @@
  * Time: 0:38
  */
 
-namespace FactoryMethod {
+namespace FactoryMethod;
 
 
-    abstract class Factory
+abstract class Factory
+{
+    public function create(string $owner): Product
     {
-        public function create(string $owner) : Product
-        {
-            $product = $this->createProduct($owner);
-            $this->registerProduct($product);
-            return $product;
-        }
-
-        abstract protected function createProduct(string $owner);
-
-        abstract protected function registerProduct(Product $product);
+        $product = $this->createProduct($owner);
+        $this->registerProduct($product);
+        return $product;
     }
+
+    abstract protected function createProduct(string $owner);
+
+    abstract protected function registerProduct(Product $product);
 }

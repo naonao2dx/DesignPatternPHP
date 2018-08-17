@@ -6,10 +6,9 @@
  * Time: 0:31
  */
 
-namespace FactoryMethod {
+namespace FactoryMethod;
 
-    interface Product
-    {
-        public function use();
-    }
+interface Product
+{
+    public function use();
 }

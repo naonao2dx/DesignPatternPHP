@@ -6,18 +6,17 @@
  * Time: 11:09
  */
 
-namespace AbstractFactory {
+namespace AbstractFactory;
 
 
-    abstract class Item
+abstract class Item
+{
+    protected $caption;
+
+    public function __construct(string $caption)
     {
-        protected $caption;
-
-        public function __construct(string $caption)
-        {
-            $this->caption = $caption;
-        }
-
-        abstract public function makeHTML();
+        $this->caption = $caption;
     }
+
+    abstract public function makeHTML();
 }

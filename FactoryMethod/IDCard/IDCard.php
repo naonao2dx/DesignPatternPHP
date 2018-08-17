@@ -6,32 +6,31 @@
  * Time: 0:45
  */
 
-namespace FactoryMethod {
-    include_once dirname(__FILE__) . "/../Framework/Product.php";
-    include_once dirname(__FILE__) . "/../../Util.php";
+namespace FactoryMethod;
+include_once dirname(__FILE__) . "/../Framework/Product.php";
+include_once dirname(__FILE__) . "/../../Util.php";
 
 
-    class IDCard implements Product
+class IDCard implements Product
+{
+    private $owner;
+
+    function __construct(string $owner)
     {
-        private $owner;
+        println("Make {$owner}'s card.");
+        $this->owner = $owner;
+    }
 
-        function __construct(string $owner)
-        {
-            println("Make {$owner}'s card.");
-            $this->owner = $owner;
-        }
+    function use()
+    {
+        println("use {$this->owner}'s card.");
+    }
 
-        function use()
-        {
-            println("use {$this->owner}'s card.");
-        }
-
-        /**
-         * @return mixed
-         */
-        public function getOwner() : string
-        {
-            return $this->owner;
-        }
+    /**
+     * @return mixed
+     */
+    public function getOwner(): string
+    {
+        return $this->owner;
     }
 }
