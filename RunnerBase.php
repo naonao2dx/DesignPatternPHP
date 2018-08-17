@@ -13,6 +13,7 @@ abstract class RunnerBase
     {
         println("/**** " . get_class($this) . " ****/");
         $this->exec();
+        println();
     }
 
     abstract protected function exec();
