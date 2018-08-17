@@ -13,6 +13,7 @@ include_once dirname(__FILE__) . "/AbstractFactory/Runner.php";
 include_once dirname(__FILE__) . "/Builder/Runner.php";
 include_once dirname(__FILE__) . "/AdvBuilder/Runner.php";
 include_once dirname(__FILE__) . "/Adapter_Inheritance/Runner.php";
+include_once dirname(__FILE__) . "/Adapter_Composite/Runner.php";
 
 $factoryMethod = new FactoryMethod\Runner();
 $factoryMethod->run();
@@ -31,3 +32,6 @@ $advBuilder->run();
 
 $adapterInheritance = new Adapter_Inheritance\Runner();
 $adapterInheritance->run();
+
+$adapterComposite = new Adapter_Composite\Runner();
+$adapterComposite->run();
